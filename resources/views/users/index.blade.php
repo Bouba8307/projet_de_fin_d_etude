@@ -13,7 +13,9 @@
                     </h1>
                 </div>
                 <div class="col-auto my-4">
-                    <a href="{{ route('users.create') }}" class="btn btn-primary add-list"><i class="fa-solid fa-plus me-3"></i>Ajouter</a>
+                    @if(auth()->user()->username === 'boubacar')
+                        <a href="{{ route('users.create') }}" class="btn btn-primary add-list"><i class="fa-solid fa-plus me-3"></i>Ajouter</a>
+                    @endif
                     <a href="{{ route('users.index') }}" class="btn btn-danger add-list"><i class="fa-solid fa-trash me-3"></i>Effacer la recherche</a>
                 </div>
             </div>
@@ -29,22 +31,21 @@
 
     <!-- DÉBUT : Alerte -->
     <div class="container-xl px-4 mt-n4">
-        <?php if (session()->has('success')): ?>
+        @if (session()->has('success'))
         <div class="alert alert-success alert-icon" role="alert">
             <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Fermer"></button>
             <div class="alert-icon-aside">
                 <i class="far fa-flag"></i>
             </div>
             <div class="alert-icon-content">
-                <?= session('success') ?>
+                {{ session('success') }}
             </div>
         </div>
-        <?php endif; ?>
+        @endif
     </div>
     <!-- FIN : Alerte -->
 </header>
 <!-- FIN : En-tête -->
-
 
 <!-- DÉBUT : Contenu principal de la page -->
 <div class="container px-2 mt-n10">
@@ -92,7 +93,7 @@
                                     <th scope="col">@sortablelink('name')</th>
                                     <th scope="col">@sortablelink('username')</th>
                                     <th scope="col">@sortablelink('email')</th>
-                                    <th scope="col">Action</th>
+                                    <!-- <th scope="col">Action</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -103,6 +104,8 @@
                                     <td>{{ $user->username }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>
+                                    @if(auth()->user()->username === 'boubacar')
+                        
                                         <div class="d-flex">
                                             <a href="{{ route('users.edit', $user->username) }}" class="btn btn-outline-primary btn-sm mx-1"><i class="fas fa-edit"></i></a>
                                             <form action="{{ route('users.destroy', $user->username) }}" method="POST">
@@ -113,6 +116,7 @@
                                                 </button>
                                             </form>
                                         </div>
+                                        @endif
                                     </td>
                                 </tr>
                                 @endforeach

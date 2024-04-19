@@ -5,20 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GestionStocks</title>
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <style>
         body {
-            font-family: 'figtree', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background: url('https://img.freepik.com/psd-premium/livre-ampoule-dessus-fond-blanc_904424-123.jpg?w=360');
+            background-repeat: repeat;
             background-color: #f0f2f5;
-        }
-
-        .flex {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
@@ -26,37 +23,26 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0 auto;
         }
 
         .card {
             position: relative;
             width: 400px;
-            padding: 200px;
-            background-color:aqua;
+            padding: 40px;
+            background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-        }
-
-        .card::before {
-            content: "Gestion Stocks";
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 30px;
-            font-weight: bold;
-            background-color: #fff;
-            padding: 0 10px;
-            border-radius: 4px;
+            text-align: center;
         }
 
         .logo {
-            text-align: center;
             margin-bottom: 20px;
         }
 
-        .logo img {
-            width: 150px;
+        .logo h1 {
+            font-size: 36px;
+            color: #000;
         }
 
         .form-group {
@@ -79,35 +65,49 @@
         }
 
         .form-group .btn {
-            width: 200%;
-            padding: 20px;
+            width: 100%;
+            padding: 12px;
             background-color: #1877f2;
             color: #fff;
             border: none;
             border-radius: 4px;
             font-weight: 600;
             cursor: pointer;
-            text-align: center;
-            text-decoration:underline;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
         }
 
         .form-group .btn-login {
-            margin-bottom: 10px;
             background-color: #1877f2;
+        }
+
+        .form-group .btn-login:hover {
+            background-color: #0e62cd;
         }
 
         .form-group .btn-register {
             background-color: #42b72a;
         }
 
-        .form-group .btn:hover {
-            background-color: #0e62cd;
+        .form-group .btn-register:hover {
+            background-color: #30a019;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="card">
+        <div class="logo">
+            <h1>Savoir</h1>
+        </div>
         <form class="flex">
             @if (Route::has('login'))
                 <div class="form-group">
@@ -115,12 +115,14 @@
                         <a href="{{ url('/dashboard') }}" class="btn btn-login">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}" class="btn btn-login">Login</a>
-                       @endif
                     @endauth
                 </div>
-    
+            @endif
         </form>
     </div>
+</div>
+<div class="footer">
+    &copy; 2023 GestionStocks. All rights reserved.
 </div>
 </body>
 </html>

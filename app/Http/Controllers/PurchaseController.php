@@ -134,7 +134,7 @@ class PurchaseController extends Controller
             PurchaseDetails::insert($pDetails);
         }
 
-        return Redirect::route('purchases.allPurchases')->with('success', 'Purchase has been created!');
+        return Redirect::route('purchases.allPurchases')->with('success', "L'achat a été créé!");
     }
 
     /**
@@ -158,7 +158,7 @@ class PurchaseController extends Controller
                 'updated_by' => auth()->user()->id
             ]); // 1 = approved, 0 = pending
 
-        return Redirect::route('purchases.allPurchases')->with('success', 'Purchase has been approved!');
+        return Redirect::route('purchases.allPurchases')->with('success', "L'achat a été approuvé ! ");
     }
 
     /**
@@ -173,7 +173,7 @@ class PurchaseController extends Controller
 
         PurchaseDetails::where('purchase_id', $purchase_id)->delete();
 
-        return Redirect::route('purchases.allPurchases')->with('success', 'Purchase has been deleted!');
+        return Redirect::route('purchases.allPurchases')->with('success', "L'achat a été supprimé!");
     }
 
     /**

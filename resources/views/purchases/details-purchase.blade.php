@@ -1,3 +1,4 @@
+@section('content')
     <!-- BEGIN: Informations fournisseur -->
     <div class="col-xl-12">
         <div class="card mb-4">

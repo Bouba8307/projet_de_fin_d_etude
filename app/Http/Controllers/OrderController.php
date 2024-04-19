@@ -158,7 +158,7 @@ class OrderController extends Controller
         // Delete Cart Sopping History
         Cart::destroy();
 
-        return Redirect::route('order.pendingOrders')->with('success', 'Order has been created!');
+        return Redirect::route('order.pendingOrders')->with('success', 'La commande a été créée!');
     }
 
     /**
@@ -178,7 +178,7 @@ class OrderController extends Controller
 
         Order::findOrFail($order_id)->update(['order_status' => 'complete']);
 
-        return Redirect::route('order.completeOrders')->with('success', 'Order has been completed!');
+        return Redirect::route('order.completeOrders')->with('success', 'La commande est terminée!');
     }
 
     /**
@@ -205,7 +205,7 @@ class OrderController extends Controller
             'pay' => $paidPay
         ]);
 
-        return Redirect::route('order.dueOrders')->with('success', 'Due amount has been updated!');
+        return Redirect::route('order.dueOrders')->with('success', 'Le montant dû a été mis à jour!');
     }
 
     /**

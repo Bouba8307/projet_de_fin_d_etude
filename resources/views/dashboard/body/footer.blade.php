@@ -5,7 +5,7 @@
             <div class="col-md-6 text-md-end small">
                 <a href="#">Politique de confidentialité</a>
                 ·
-                <a href="#">Conditions générales</a>
+                <a  href="#">Conditions générales</a>
             </div>
         </div>
     </div>

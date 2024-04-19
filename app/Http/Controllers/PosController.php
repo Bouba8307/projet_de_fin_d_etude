@@ -58,7 +58,7 @@ class PosController extends Controller
             'price' => $validatedData['price']
         ]);
 
-        return Redirect::back()->with('success', 'Product has been added to cart!');
+        return Redirect::back()->with('success', 'Le produit a été ajouté au panier!');
     }
 
     /**
@@ -74,7 +74,7 @@ class PosController extends Controller
 
         Cart::update($rowId, $validatedData['qty']);
 
-        return Redirect::back()->with('success', 'Product has been updated from cart!');
+        return Redirect::back()->with('success', 'Le produit a été mis à jour depuis le panier!');
     }
 
     /**
@@ -84,7 +84,7 @@ class PosController extends Controller
     {
         Cart::remove($rowId);
 
-        return Redirect::back()->with('success', 'Product has been deleted from cart!');
+        return Redirect::back()->with('success', 'Le produit a été supprimé du panier!');
     }
 
     /**

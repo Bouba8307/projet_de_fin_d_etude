@@ -98,26 +98,31 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($orders as $order)
-                                <tr>
-                                    <th scope="row">{{ (($orders->currentPage() * (request('row') ? request('row') : 10)) - (request('row') ? request('row') : 10)) + $loop->iteration  }}</th>
-                                    <td>{{ $order->invoice_no }}</td>
-                                    <td>{{ $order->customer->name }}</td>
-                                    <td>{{ $order->order_date }}</td>
-                                    <td>{{ $order->payment_type }}</td>
-                                    <td>{{ $order->total }}</td>
-                                    <td>
-                                        <span class="btn btn-success btn-sm text-uppercase">{{ $order->order_status }}</span>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex">
-                                            <a href="{{ route('order.orderCompleteDetails', $order->id) }}" class="btn btn-outline-success btn-sm mx-1"><i class="fa-solid fa-eye"></i></a>
-                                            <a href="{{ route('order.downloadInvoice', $order->id) }}" class="btn btn-outline-primary btn-sm mx-1"><i class="fa-solid fa-print"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
+
+    @foreach ($orders as $order)
+
+    <tr>
+        <th scope="row">{{ (($orders->currentPage() * (request('row') ? request('row') : 10)) - (request('row') ? request('row') : 10)) + $loop->iteration  }}</th>
+        <td>{{ $order->invoice_no }}</td>
+        <td>{{ optional($order->customer)->name }}</td>
+        <td>{{ $order->order_date }}</td>
+        <td>{{ $order->payment_type }}</td>
+        <td>{{ $order->total }}</td>
+        <td>
+            <span class="btn btn-success btn-sm text-uppercase">{{ $order->order_status }}</span>
+        </td>
+        <td>
+            <div class="d-flex">
+                <a href="{{ route('order.orderCompleteDetails', $order->id) }}" class="btn btn-outline-success btn-sm mx-1"><i class="fa-solid fa-eye"></i></a>
+                <a href="{{ route('order.downloadInvoice', $order->id) }}" class="btn btn-outline-primary btn-sm mx-1"><i class="fa-solid fa-print"></i></a>
+            </div>
+        </td>
+    </tr>
+
+    @endforeach
+
+</tbody>
+
                         </table>
                     </div>
                 </div>

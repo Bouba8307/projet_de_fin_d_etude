@@ -52,7 +52,7 @@ class UnitController extends Controller
 
         Unit::create($validatedData);
 
-        return Redirect::route('units.index')->with('success', 'Unit has been created!');
+        return Redirect::route('units.index')->with('success', "L 'unité a été créée !");
     }
 
     /**
@@ -87,7 +87,7 @@ class UnitController extends Controller
 
         Unit::where('slug', $unit->slug)->update($validatedData);
 
-        return Redirect::route('units.index')->with('success', 'Unit has been updated!');
+        return Redirect::route('units.index')->with('success', "L'unité a été mise à jour !");
     }
 
     /**

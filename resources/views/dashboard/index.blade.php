@@ -26,11 +26,15 @@
                     <div class="page-header-subtitle">La vue d'ensemble du tableau de bord et résumé du contenu</div>
                 </div>
                 <div class="col-12 col-xl-auto mt-4">
-                    <div class="input-group input-group-joined border-0" style="width: 16.5rem">
-                        <span class="input-group-text"><i class="text-primary" data-feather="calendar"></i></span>
-                        <input class="form-control ps-0 pointer" id="litepickerRangePlugin" placeholder="Select date range..." />
-                    </div>
-                </div>
+                <div class="col-12 col-xl-auto mt-4">
+    <div class="input-group input-group-joined border-0" style="width: 16.5rem">
+        <span class="input-group-text"><i class="feather-xl text-primary" data-feather="calendar"></i></span>
+        <input class="form-control ps-0 pointer" id="litepickerRangePlugin" placeholder="Sélectionnez la plage de dates..." />
+    </div>
+</div>
+
+</div>
+
             </div>
         </div>
     </div>
@@ -46,13 +50,13 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="me-3">
                             <div class="text-white-75 small">Gains (mensuels)</div>
-                            <div class="text-lg fw-bold">40 000 $</div>
+                            <div class="text-lg fw-bold">40 000</div>
                         </div>
                         <i class="feather-xl text-white-50" data-feather="calendar"></i>
                     </div>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between small">
-                    <a class="text-white stretched-link" href="#">Voir le rapport</a>
+                    <a class="text-white stretched-link" href="{{ route('purchases.dailyPurchaseReport') }}">>Voir le rapport</a>
                     <div class="text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
@@ -63,7 +67,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="me-3">
                             <div class="text-white-75 small">Gains (Annuels)</div>
-                            <div class="text-lg fw-bold">$215,000</div>
+                            <div class="text-lg fw-bold">215,000 CFA</div>
                         </div>
                         <i class="feather-xl text-white-50" data-feather="dollar-sign"></i>
                     </div>
@@ -79,8 +83,8 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="me-3">
-                            <div class="text-white-75 small">Achèvement de la tâche</div>
-                            <div class="text-lg fw-bold">24</div>
+                            <div class="text-white-75 small"> Commande en attente</div>
+                            <div class="text-lg fw-bold" >24</div>
                         </div>
                         <i class="feather-xl text-white-50" data-feather="check-square"></i>
                     </div>
@@ -96,10 +100,10 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="me-3">
-                            <div class="text-white-75 small">Requêtes en attente</div>
+                            <div class="text-white-75 small">Total des produits</div>
                             <div class="text-lg fw-bold">17</div>
                         </div>
-                        <i class="feather-xl text-white-50" data-feather="message-circle"></i>
+                        <i class="feather-xl text-white-50" data-feather="box"></i>
                     </div>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between small">
@@ -110,49 +114,16 @@
         </div>
     </div>
     <!-- Example Charts for Dashboard Demo -->
-    <div class="row">
-        <div class="col-xl-6 mb-4">
-            <div class="card card-header-actions h-100">
-                <div class="card-header">
-                Répartition des revenus
-                    <div class="dropdown no-caret">
-                        <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="areaChartDropdownExample" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="text-gray-500" data-feather="more-vertical"></i></button>
-                        <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="areaChartDropdownExample">
-                            <a class="dropdown-item" href="#">Les 12 derniers Mois</a>
-                            <a class="dropdown-item" href="#">Les 30 derniers jours</a>
-                            <a class="dropdown-item" href="#">Les 7 derniers jours</a>
-                            <a class="dropdown-item" href="#">Ce mois-ci</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Gamme personnalisée</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="chart-area"><canvas id="myAreaChart" width="100%" height="30"></canvas></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-6 mb-4">
-            <div class="card card-header-actions h-100">
-                <div class="card-header">
-                Revenu mensuel
-                    <div class="dropdown no-caret">
-                        <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="areaChartDropdownExample" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="text-gray-500" data-feather="more-vertical"></i></button>
-                        <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="areaChartDropdownExample">
-                            <a class="dropdown-item" href="#">Les 12 derniers Mois</a>
-                            <a class="dropdown-item" href="#">Les 30 derniers Jours</a>
-                            <a class="dropdown-item" href="#">Les 7 derniers jours</a>
-                            <a class="dropdown-item" href="#">Ce Mois-ci</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Gamme personnalisée</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="chart-bar"><canvas id="myBarChart" width="100%" height="30"></canvas></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </div>
 @endsection
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var picker = new Litepicker({
+            element: document.getElementById('litepickerRangePlugin'),
+            lang: 'fr', // Utilisez le code de langue pour le français
+            singleMode: false, // Si vous avez besoin de sélectionner une plage de dates
+            // Autres options...
+        });
+    });
+</script>

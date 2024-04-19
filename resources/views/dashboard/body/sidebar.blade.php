@@ -9,7 +9,7 @@
             </a>
             <a class="nav-link {{ Request::is('pos*') ? 'active' : '' }}" href="{{ route('pos.index') }}">
                 <div class="nav-link-icon"><i class="fa-solid fa-cart-shopping"></i></div>
-                PDV
+                Point de vente
             </a>
 
             <!-- En-tête du menu latéral (Commandes)-->

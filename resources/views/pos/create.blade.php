@@ -28,7 +28,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-sm-6">
                                 <div class="logo">
-                                    <h1>Nom du magasin</h1>
+                                    <h1>Le Savoir</h1>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-6">
@@ -59,10 +59,10 @@
                             </div>
                             <div class="col-sm-6 text-end mb-50">
                                 <h4 class="inv-title-1">Magasin</h4>
-                                <p class="inv-from-1">Nom du magasin</p>
+                                <p class="inv-from-1">Le Savoir </p>
                                 <p class="inv-from-1">+223 93 54 68 06</p>
-                                <p class="inv-from-1">email@example.com</p>
-                                <p class="inv-from-2">Mali, France, Italie</p>
+                                <p class="inv-from-1">boubacartraore331@gmail.com</p>
+                                <p class="inv-from-2">Mali</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title text-center mx-auto" id="modalCenterTitle">Facture de {{ $customer->name }}<br/>Montant total ${{ Cart::total() }}</h3>
+                <h3 class="modal-title text-center mx-auto" id="modalCenterTitle">Facture de {{ $customer->name }}<br/>Montant total {{ Cart::total() }} FCFA</h3>
             </div>
 
             <form action="{{ route('pos.createOrder') }}" method="POST">
@@ -149,8 +149,8 @@
                             <select class="form-control @error('payment_type') is-invalid @enderror" id="payment_type" name="payment_type">
                                 <option selected="" disabled="">Sélectionnez un paiement :</option>
                                 <option value="Espèces">Espèces</option>
-                                <option value="Chèque">Chèque</option>
-                                <option value="Dû">Dû</option>
+                                <!-- <option value="Chèque">Chèque</option>
+                                <option value="Dû">Dû</option> -->
                             </select>
                             @error('payment_type')
                             <div class="invalid-feedback">

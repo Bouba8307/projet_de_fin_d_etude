@@ -95,27 +95,27 @@
                                 @enderror
                             </div>
                             <!-- Groupe de formulaire (nom de la banque) -->
-                            <div class="col-md-6">
+                            <!-- <div class="col-md-6">
                                 <label class="small mb-1" for="bank_name">Nom de la banque</label>
                                 <select class="form-select form-control-solid @error('bank_name') is-invalid @enderror" id="bank_name" name="bank_name">
                                     <option selected="" disabled="">Sélectionnez une banque :</option>
-                                    <option value="BRI" @if(old('bank_name') == 'BRI')selected="selected"@endif>BRI</option>
-                                    <option value="BNI" @if(old('bank_name') == 'BNI')selected="selected"@endif>BNI</option>
-                                    <option value="BCA" @if(old('bank_name') == 'BCA')selected="selected"@endif>BCA</option>
-                                    <option value="BSI" @if(old('bank_name') == 'BSI')selected="selected"@endif>BSI</option>
-                                    <option value="Mandiri" @if(old('bank_name') == 'Mandiri')selected="selected"@endif>Mandiri</option>
+                                    <option value="BRI" @if(old('bank_name') == 'BRI')selected="selected"@endif>BDM</option>
+                                    <option value="BNI" @if(old('bank_name') == 'BNI')selected="selected"@endif>BIM</option>
+                                    <option value="BCA" @if(old('bank_name') == 'BCA')selected="selected"@endif>Ecobank</option>
+                                    <option value="BSI" @if(old('bank_name') == 'BSI')selected="selected"@endif>BMS</option>
+                                     <option value="Mandiri" @if(old('bank_name') == 'Mandiri')selected="selected"@endif>Mandiri</option> 
                                 </select>
                                 @error('bank_name')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
                                 @enderror
-                            </div>
+                            </div> -->
                         </div>
                         <!-- Ligne de formulaire -->
                         <div class="row gx-3 mb-3">
                             <!-- Groupe de formulaire (titulaire du compte) -->
-                            <div class="col-md-6">
+                            <!-- <div class="col-md-6">
                                 <label class="small mb-1" for="account_holder">Titulaire du compte</label>
                                 <input class="form-control form-control-solid @error('account_holder') is-invalid @enderror" id="account_holder" name="account_holder" type="text" placeholder="" value="{{ old('account_holder') }}" />
                                 @error('account_holder')
@@ -123,9 +123,9 @@
                                     {{ $message }}
                                 </div>
                                 @enderror
-                            </div>
+                            </div> -->
                             <!-- Groupe de formulaire (numéro de compte) -->
-                            <div class="col-md-6">
+                            <!-- <div class="col-md-6">
                                 <label class="small mb-1" for="account_number">Numéro de compte</label>
                                 <input class="form-control form-control-solid @error('account_number') is-invalid @enderror" id="account_number" name="account_number" type="text" placeholder="" value="{{ old('account_number') }}" />
                                 @error('account_number')
@@ -133,7 +133,7 @@
                                     {{ $message }}
                                 </div>
                                 @enderror
-                            </div>
+                            </div> -->
                         </div>
                         <!-- Groupe de formulaire (adresse) -->
                         <div class="mb-3">

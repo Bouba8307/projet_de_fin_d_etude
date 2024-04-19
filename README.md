@@ -27,12 +27,12 @@ Inventory Management System with Laravel 10 and MySql.
 1.  **Clone Repository or Download**
 
     ```bash
-    $ git clone https://github.com/fajarghifar/inventory-management-system
+    $ git clone 
     ```
 1. **Setup**
     ```bash
     # Go into the repository
-    $ cd inventory-management-system
+    $ cd gestion de stock
 
     # Install dependencies
     $ composer install

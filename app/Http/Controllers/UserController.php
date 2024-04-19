@@ -133,7 +133,7 @@ class UserController extends Controller
 
         User::where('id', $user->id)->update($validatedData);
 
-        return Redirect::route('users.index')->with('success', 'User has been updated!');
+        return Redirect::route('users.index')->with('success', "L'utilisateur a été mis à jour !");
     }
 
     public function updatePassword(Request $request, String $username)

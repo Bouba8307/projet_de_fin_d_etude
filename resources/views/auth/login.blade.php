@@ -7,14 +7,8 @@
         <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
             <div class="card my-5">
                 <div class="card-body p-5 text-center">
-                    <div class="h3 fw-light mb-3">Connexion</div>
-                    <!-- BEGIN: Liens de connexion via les réseaux sociaux -->
-<a class="btn btn-icon btn-facebook mx-1" href="https://www.facebook.com/votre-page-facebook"><i class="fab fa-facebook-f fa-fw fa-sm"></i></a>
-<a class="btn btn-icon btn-github mx-1" href="https://www.github.com/votre-compte-github"><i class="fab fa-github fa-fw fa-sm"></i></a>
-<a class="btn btn-icon btn-google mx-1" href="https://accounts.google.com/"><i class="fab fa-google fa-fw fa-sm"></i></a>
-<a class="btn btn-icon btn-twitter mx-1" href="https://twitter.com/votre-compte-twitter"><i class="fab fa-twitter fa-fw fa-sm text-white"></i></a>
-<!-- END: Liens de connexion via les réseaux sociaux -->
-
+                    <div class="h3 fw-light mb-3">Page de connexion</div>
+                    <h1 class="text-primary" style="font-size: 48px;">SAVOIR</h1>
                 </div>
                 <hr class="my-0" />
                 <div class="card-body p-5">
@@ -71,12 +65,11 @@
                 <hr class="my-0" />
                 <div class="card-body px-5 py-4">
                     <div class="small text-center">
-                        Nouvel utilisateur ?
-                        <a href="{{ route('register') }}">Créer un compte !</a>
+                         vous n'avez pas de compte  ?
+                        <a href="{{ route('register') }}">Demande à l'administrateur !</a>
                     </div>
                 </div>
             </div>
-            <!-- END: Formulaire de connexion via les réseaux sociaux -->
         </div>
     </div>
 </div>

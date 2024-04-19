@@ -28,7 +28,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-sm-6">
                                 <div class="logo">
-                                    <h1>Nom du magasin</h1>
+                                    <h1>Le Savoir</h1>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-6">
@@ -59,10 +59,10 @@
                             </div>
                             <div class="col-sm-6 text-end mb-50">
                                 <h4 class="inv-title-1">Magasin</h4>
-                                <p class="inv-from-1">Nom du magasin</p>
-                                <p class="inv-from-1">(+62) 123 123 123</p>
+                                <p class="inv-from-1">Le Savoir</p>
+                                <p class="inv-from-1">+223 123 123 123</p>
                                 <p class="inv-from-1">email@example.com</p>
-                                <p class="inv-from-2">Cirebon, Jawa Barat, Indonésie</p>
+                                <p class="inv-from-2">Mali</p>
                             </div>
                         </div>
                     </div>

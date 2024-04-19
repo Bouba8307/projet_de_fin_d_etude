@@ -33,13 +33,16 @@
                     <div class="row gx-3 mb-3">
                         <!-- Groupe de formulaire (nom du client) -->
                         <div class="col-md-6">
-                            <label class="small mb-1">Nom</label>
-                            <div class="form-control form-control-solid">{{ $order->customer->name }}</div>
+                           <label class="small mb-1">Nom</label>
+                            <div class="form-control form-control-solid">
+                                {{ optional($order->customer)->name }}
+                            </div>
                         </div>
+
                         <!-- Groupe de formulaire (email du client) -->
                         <div class="col-md-6">
                             <label class="small mb-1">Email</label>
-                            <div class="form-control form-control-solid">{{ $order->customer->email }}</div>
+                            <div class="form-control form-control-solid">{{optional($order->customer)->email }}</div>
                         </div>
                     </div>
                     <!-- Ligne de formulaire -->
@@ -47,7 +50,7 @@
                         <!-- Groupe de formulaire (numéro de téléphone du client) -->
                         <div class="col-md-6">
                             <label class="small mb-1">Téléphone</label>
-                            <div class="form-control form-control-solid">{{ $order->customer->phone }}</div>
+                            <div class="form-control form-control-solid">{{optional($order->customer)->phone }}</div>
                         </div>
                         <!-- Groupe de formulaire (date de commande) -->
                         <div class="col-md-6">
@@ -97,7 +100,7 @@
                     <!-- Groupe de formulaire (adresse) -->
                     <div class="mb-3">
                         <label class="small mb-1">Adresse</label>
-                        <div class="form-control form-control-solid">{{ $order->customer->address }}</div>
+                        <div class="form-control form-control-solid">{{optional($order->customer)->address }}</div>
                     </div>
 
                     @if ($order->order_status == 'pending')
@@ -144,12 +147,13 @@
                                     <tr>
                                         <td scope="row">{{ $loop->iteration  }}</td>
                                         <td scope="row">
-                                            <div style="max-height: 80px; max-width: 80px;">
-                                                <img class="img-fluid"  src="{{ $item->product->product_image ? asset('storage/products/'.$item->product->product_image) : asset('assets/img/products/default.webp') }}">
-                                            </div>
+                                        <div style="max-height: 80px; max-width: 80px;">
+                                            <img class="img-fluid"  src="{{ optional($item->product)->product_image ? asset('storage/products/'.$item->product->product_image) : asset('assets/img/products/default.webp') }}">
+                                        </div>
+
                                         </td>
-                                        <td scope="row">{{ $item->product->product_name }}</td>
-                                        <td scope="row">{{ $item->product->product_code }}</td>
+                                        <td scope="row">{{ optional($item->product)->product_name }}</td>
+                                        <td scope="row">{{ optional($item->product)->product_code }}</td>
                                         <td scope="row">{{ $item->quantity }}</td>
                                         <td scope="row">{{ $item->unitcost }}</td>
                                         <td scope="row">{{ $item->total }}</td>

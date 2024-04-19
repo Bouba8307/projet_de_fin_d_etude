@@ -7,22 +7,17 @@
         <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
             <div class="card my-5">
                 <div class="card-body p-5 text-center">
-                    <div class="h3 fw-light mb-3">Se connecter</div>
-                    <!-- BEGIN: Liens de connexion via les réseaux sociaux -->
-                    <a class="btn btn-icon btn-facebook mx-1" href="#"><i class="fab fa-facebook-f fa-fw fa-sm"></i></a>
-                    <a class="btn btn-icon btn-github mx-1" href="#"><i class="fab fa-github fa-fw fa-sm"></i></a>
-                    <a class="btn btn-icon btn-google mx-1" href="#"><i class="fab fa-google fa-fw fa-sm"></i></a>
-                    <a class="btn btn-icon btn-twitter mx-1" href="#"><i class="fab fa-twitter fa-fw fa-sm text-white"></i></a>
-                    <!-- END: Liens de connexion via les réseaux sociaux -->
+                    <div class="h3 fw-light mb-3">Connexion</div>
+                    <h1 class="text-primary" style="font-size: 48px;">SAVOIR</h1>
                 </div>
                 <hr class="my-0" />
                 <div class="card-body p-5">
                     <!-- BEGIN: Formulaire de connexion -->
                     <form action="{{ route('login') }}" method="POST">
                         @csrf
-                        <!-- Groupe de formulaire (adresse e-mail/nom d'utilisateur) -->
+                        <!-- Groupe de formulaire (adresse e-mail) -->
                         <div class="mb-3">
-                            <label class="text-gray-600 small" for="input_type">E-mail / Nom d'utilisateur</label>
+                            <label class="text-gray-600 small" for="input_type">Email / Nom d'utilisateur</label>
                             <input
                                 class="form-control form-control-solid @if($errors->get('email') OR $errors->get('username')) is-invalid @endif"
                                 type="text"
@@ -54,9 +49,9 @@
                             </div>
                             @enderror
                         </div>
-                        <!-- Groupe de formulaire (lien de mot de passe oublié) -->
-                        <div class="mb-3"><a class="small" href="#">Mot de passe oublié ?</a></div>
-                        <!-- Groupe de formulaire (boîte de connexion) -->
+                        <!-- Groupe de formulaire (lien pour oubli de mot de passe) -->
+                        <div class="mb-3"><a class="small" href="register">Mot de passe oublié ?</a></div>
+                        <!-- Groupe de formulaire (case à cocher se souvenir de moi et bouton de connexion) -->
                         <div class="d-flex align-items-center justify-content-between mb-0">
                             <div class="form-check">
                                 <input class="form-check-input" id="remember_me" name="remember" type="checkbox" />
@@ -70,8 +65,8 @@
                 <hr class="my-0" />
                 <div class="card-body px-5 py-4">
                     <div class="small text-center">
-                        Vous n'avez pas de compte ?
-                        <a href="{{ route('register') }}">Créez un compte !</a>
+                         vous n'avez pas de compte  ?
+                        <a href="{{ route('login') }}">Demande à l'administrateur !</a>
                     </div>
                 </div>
             </div>
