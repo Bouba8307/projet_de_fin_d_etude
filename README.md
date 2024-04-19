@@ -1,98 +1,97 @@
-## ✨ Inventory Management System
+## ✨ Système de Gestion des Stocks
 
-Inventory Management System with Laravel 10 and MySql.
+Système de Gestion des Stocks avec Laravel 10 et MySql.
 
-![Dashboard](https://user-images.githubusercontent.com/71541409/236858603-89e4be74-0a8b-4b4b-98b0-24e66ec5602d.png)
+![Tableau de bord](https://user-images.githubusercontent.com/71541409/236858603-89e4be74-0a8b-4b4b-98b0-24e66ec5602d.png)
 
-## 💀 Design Database
-![Diagram Class](https://github.com/fajarghifar/inventory-management-system/assets/71541409/0c7d4163-96f5-4724-8741-4615e52ecf98)
+## 💀 Conception de la Base de Données
+![Diagramme de Classe](https://github.com/fajarghifar/inventory-management-system/assets/71541409/0c7d4163-96f5-4724-8741-4615e52ecf98)
 
-## 😎 Features
-- POS
-- Orders
-  - Pending Orders
-  - Complete Orders
-  - Pending Due
-- Purchases
-  - All Purchases
-  - Approval Purchases
-  - Purchase Report
-- Products
-- Customers
-- Suppliers
+## 😎 Fonctionnalités
+- POS (Point de Vente)
+- Commandes
+  - Commandes en Attente
+  - Commandes Terminées
+  - Dû en Attente
+- Achats
+  - Tous les Achats
+  - Achats en Attente d'Approbation
+  - Rapport d'Achat
+- Produits
+- Clients
+- Fournisseurs
 
 
-## 🚀 How to Use
+## 🚀 Comment Utiliser
 
-1.  **Clone Repository or Download**
+1.  **Cloner le Répertoire ou Télécharger**
 
     ```bash
     $ git clone 
     ```
-1. **Setup**
+1. **Configuration**
     ```bash
-    # Go into the repository
+    # Aller dans le répertoire
     $ cd gestion de stock
 
-    # Install dependencies
+    # Installer les dépendances
     $ composer install
 
-    # Open with your text editor
+    # Ouvrir avec votre éditeur de texte
     $ code .
     ```
 1. **.ENV**
 
-    Rename or copy the `.env.example` file to `.env`
+    Renommer ou copier le fichier `.env.example` en `.env`
     ```bash
-    # Generate app key
+    # Générer la clé de l'application
     $ php artisan key:generate
     ```
-1. **Custom Faker Locale**
+1. **Locale Faker Personnalisée**
 
-    To set Faker Locale, add this line of code to the end `.env` file.
+    Pour définir la Locale Faker, ajoutez cette ligne de code à la fin du fichier `.env`.
     ```bash
-    # In this case, the locale is set to Indonesian
+    # Dans ce cas, la locale est définie sur l'indonésien
 
     FAKER_LOCALE="id_ID"
     ```
 
-1. **Setup Database**
+1. **Configuration de la Base de Données**
 
-    Setup your database credentials in your `.env` file.
+    Configurez vos identifiants de base de données dans votre fichier `.env`.
 
-1. **Seed Database**
+1. **Alimenter la Base de Données**
     ```bash
     $ php artisan:migrate:fresh --seed
 
-    # Note: If showing an error, please try to rerun this command.
+    # Note : En cas d'erreur, veuillez essayer de relancer cette commande.
     ```
-1. **Create Storage Link**
+1. **Créer le Lien de Stockage**
 
     ```bash
     $ php artisan storage:link
     ```
-1. **Run Server**
+1. **Lancer le Serveur**
 
     ```bash
     $ php artisan serve
     ```
-1. **Login**
+1. **Connexion**
 
-    Try login with username: `admin` and password: `boubacar`
+    Essayez de vous connecter avec le nom d'utilisateur : `admin` et le mot de passe : `boubacar`
 
-## 🚀 Config
-1. **Config Chart**
+## 🚀 Configuration
+1. **Configuration du Graphique**
 
-    Open file `./config/cart.php`. You can set a tax, format number, etc.
-    > For More details, visit this link [hardevine/shoppingcart](https://packagist.org/packages/hardevine/shoppingcart).
+    Ouvrez le fichier `./config/cart.php`. Vous pouvez définir une taxe, un format de numéro, etc.
+    > Pour plus de détails, visitez ce lien [hardevine/shoppingcart](https://packagist.org/packages/hardevine/shoppingcart).
 
-## 📝 Contributing
+## 📝 Contribution
 
-If you have any ideas to make it more interesting, please send a PR or create an issue for a feature request.
+Si vous avez des idées pour le rendre plus intéressant, veuillez envoyer une PR ou créer un problème pour une demande de fonctionnalité.
 
-# 🤝 License
+# 🤝 Licence
 
 ### [MIT](LICENSE)
 
-> Github [@fajarghifar](https://github.com/fajarghifar) &nbsp;&middot;&nbsp;
-> Instagram [@fajarghifar](https://instagram.com/fajarghifar)
+> Github [@bouba](https://github.com/Bouba8307/projet_de_fin_d_etude.git) 
